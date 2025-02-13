@@ -191,3 +191,60 @@ body{
     margin: 10px 0px 10px 0px;
     height: 300px;
 }
+
+.footer {
+    background-color: #000; /* Black background */
+    color: white; /* White text */
+    padding: 40px 80px;
+    display: flex;
+    flex-direction: row; /* Aligns in a row */
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* Footer Columns */
+.footer-column {
+    flex: 1; /* Equal width columns */
+    min-width: 200px; /* Prevents it from getting too small */
+}
+
+/* Headings */
+.footer-column h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* List Styling */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* Bold text inside Accommodation */
+.footer-column .bold {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Bullet points */
+.footer-column ul li ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* Stack in smaller screens */
+        text-align: left;
+        padding: 30px;
+    }
+}
