@@ -14,3 +14,20 @@ document.addEventListener("DOMContentLoaded", function () {
     sliderInner.style.width = totalWidth + "px";
     sliderInner.style.animation = `scrollLoop ${totalWidth / 100}s linear infinite`;
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    let slider = document.querySelector(".slider-wrapperr");
+    let sliderInner = document.querySelector(".slider-innerr");
+
+    // Duplicate slides for seamless looping
+    let clones = sliderInner.innerHTML;
+    sliderInner.innerHTML += clones;
+
+    // Get slide width for smooth transition
+    let slideWidth = document.querySelector(".slider").offsetWidth;
+    let totalWidth = slideWidth * document.querySelectorAll(".slider").length;
+
+    // Apply animation dynamically
+    sliderInner.style.width = totalWidth + "px";
+    sliderInner.style.animation = `scrollLoop ${totalWidth / 100}s linear infinite`;
+});
