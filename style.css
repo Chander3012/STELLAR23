@@ -151,6 +151,11 @@ body{
     flex: 0 0 auto;
     width: 200px; /* Adjust width as needed */
     margin-right: 20px; /* Space between slides */
+    transition: transform 0.3s; 
+}
+
+.slide:hover {
+    transform: scale(1.1);
 }
 
 .slide img {
@@ -183,14 +188,112 @@ body{
 
 .explore-btn:hover {
     background: #e67e22;
+    transform: scale(1.1);
 }
 
 .container-fluid-3{
     background-color: #f39c12;
+    text-align: center;
+    padding: 10px 10px;
+    color: rgb(7, 7, 7);
+    display: flex;
+    justify-content:center ;
     width: 100%;
-    margin-top:10px;
-    height: 300px;
+    
 }
+
+.slider-wrapperr {
+    overflow: hidden;
+    width: 90%;
+    position: relative;
+    white-space: nowrap;
+    border-radius: 20px;
+}
+
+.slider-innerr {
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+    padding: 20px 0px 10px 0px;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+.slider {
+    flex: 0 0 auto;
+    width: 200px; /* Adjust width as needed */
+    margin-right: 20px; /* Space between slides */
+    transition: transform 0.3s; 
+     
+}
+
+.slider:hover {
+    transform: scale(1.1);
+}
+
+.slider h2{
+    font-size: clamp(12px, 0vw, 12px);
+            font-weight: bold;
+}
+
+
+.slider img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+@keyframes scrollLoop {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Moves only half so it loops seamlessly */
+    }
+}
+
+.exploree-btn {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.exploree-btn:hover {
+    background: #228ee6;
+    transform: scale(1.1);
+}
+
+.camel-img {
+    width: 30%;
+    min-width: 150px; /* Prevents it from getting too small */
+}
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    background-color: transparent; /* Removes extra spacing below the image */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .camel-img {
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .camel-img {
+        width: 80%;
+    }
+}
+
+
 
 .footer {
     background-color: #000; /* Black background */
